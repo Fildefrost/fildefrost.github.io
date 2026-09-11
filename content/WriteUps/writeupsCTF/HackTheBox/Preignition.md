@@ -1,7 +1,7 @@
 ---
 publish: true
 created: 2026-09-11T12:16:55.946Z
-modified: 2026-09-11T12:24:56.370Z
+modified: 2026-09-11T18:12:58.099Z
 ---
 
 # Preignition
@@ -64,7 +64,7 @@ whatweb 10.129.77.25
 http://10.129.77.25 [200 OK] Country[RESERVED][ZZ], HTML5, HTTPServer[nginx/1.14.2], IP[10.129.77.25], Title[Welcome to nginx!], nginx[1.14.2]
 ```
 
-![image.png](/images/HackTheBox/image.png)
+![image.png](WriteUps/images/HackTheBox/image.png)
 
 Fuzzing
 
@@ -86,13 +86,13 @@ PORT   STATE SERVICE VERSION
 
 Result: admin.php
 
-![image.png](/images/HackTheBox/image%201.png)
+![image.png](WriteUps/images/HackTheBox/image 1.png)
 
 Probamos con credenciales por defecto
 
 Admin / admin
 
-![image.png](/images/HackTheBox/image%202.png)
+![image.png](WriteUps/images/HackTheBox/image 2.png)
 
 Flag: 6483bee07c1c1d57f14e5b0717503c73
 

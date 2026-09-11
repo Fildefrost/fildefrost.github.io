@@ -1,7 +1,7 @@
 ---
 publish: true
 created: 2026-09-11T12:16:55.920Z
-modified: 2026-09-11T12:24:55.089Z
+modified: 2026-09-11T18:12:57.043Z
 ---
 
 # Library
@@ -22,19 +22,19 @@ Created time: 5 de diciembre de 2024 21:23
 sudo nmap -p- --open -sS --min-rate 5000 -vvv -Pn -n 172.17.0.2 -oG allports
 ```
 
-![image.png](/images/DockerLabs/image.png)
+![image.png](WriteUps/images/DockerLabs/image.png)
 
 ```bash
 sudo nmap -p22,80 -sCV 172.17.0.2 -oN targeted
 ```
 
-![image.png](/images/DockerLabs/image%201.png)
+![image.png](WriteUps/images/DockerLabs/image 1.png)
 
 Fem fuzzing a la web:
 
 Trobem :
 
-![image.png](/images/DockerLabs/image%202.png)
+![image.png](WriteUps/images/DockerLabs/image 2.png)
 
 Index.php : JIFGHDS87GYDFIGD
 
@@ -52,14 +52,14 @@ hydra -L /usr/share/wordlists/rockyou.txt -p JIFGHDS87GYDFIGD 172.17.0.2 ssh -vV
 
 Pass: carlos
 
-![image.png](/images/DockerLabs/image%203.png)
+![image.png](WriteUps/images/DockerLabs/image 3.png)
 
 Conectem per ssh :
 
 Usuari: carlos
 Password: JIFGHDS87GYDFIGD
 
-![image.png](/images/DockerLabs/image%204.png)
+![image.png](WriteUps/images/DockerLabs/image 4.png)
 
 ### Explotacio
 
@@ -67,7 +67,7 @@ Password: JIFGHDS87GYDFIGD
 sudo -l
 ```
 
-![image.png](/images/DockerLabs/image%205.png)
+![image.png](WriteUps/images/DockerLabs/image 5.png)
 
 Veiem que crida al script :
 
@@ -77,16 +77,16 @@ Veiem que crida al script :
 
 Veiem que podem eliminar el script i crear un nou amb la ordre de cridar a una bash:
 
-![image.png](/images/DockerLabs/image%206.png)
+![image.png](WriteUps/images/DockerLabs/image 6.png)
 
 Script original:
 
-![image.png](/images/DockerLabs/image%207.png)
+![image.png](WriteUps/images/DockerLabs/image 7.png)
 
 creem el [script.py](http://script.py/)
 
-![image.png](/images/DockerLabs/image%208.png)
+![image.png](WriteUps/images/DockerLabs/image 8.png)
 
 i executem el scrip amb sudo
 
-![image.png](/images/DockerLabs/image%209.png)
+![image.png](WriteUps/images/DockerLabs/image 9.png)

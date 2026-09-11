@@ -1,7 +1,7 @@
 ---
 publish: true
 created: 2026-09-11T12:16:55.935Z
-modified: 2026-09-11T12:24:55.776Z
+modified: 2026-09-11T18:12:57.539Z
 ---
 
 # Funnel
@@ -119,7 +119,7 @@ Una vez listado los puertos accesibles, procederemos a realizar la enumeración 
 
   Enumerando el otro archivo vemos :
 
-  ![image.png](/images/HackTheBox/image.png)
+  ![image.png](WriteUps/images/HackTheBox/image.png)
 
   Por lo que tenemos un password potencial: **funnel123#!#**
 
@@ -134,9 +134,9 @@ Una vez listado los puertos accesibles, procederemos a realizar la enumeración 
 
 Creamos dos listas, una con el password y la otra con los usuarios para ver con cual aplica
 
-![image.png](/images/HackTheBox/image%201.png)
+![image.png](WriteUps/images/HackTheBox/image 1.png)
 
-![image.png](/images/HackTheBox/image%202.png)
+![image.png](WriteUps/images/HackTheBox/image 2.png)
 
 ```bash
 ❯ hydra -L users.txt -P password.txt 10.129.88.226 ssh # 10.129.88.226 ssh

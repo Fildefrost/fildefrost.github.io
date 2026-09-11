@@ -1,7 +1,7 @@
 ---
 publish: true
 created: 2026-09-11T12:16:55.940Z
-modified: 2026-09-11T12:24:56.022Z
+modified: 2026-09-11T18:12:57.665Z
 ---
 
 # Jerry
@@ -60,7 +60,7 @@ PORT     STATE SERVICE VERSION
 
 - **Enumeracion Web (8080)**
 
-  ![image.png](/images/HackTheBox/image.png)
+  ![image.png](WriteUps/images/HackTheBox/image.png)
 
 Whateweb
 
@@ -72,13 +72,13 @@ http://10.10.10.95:8080 [200 OK] Apache, Country[RESERVED][ZZ], HTML5, HTTPServe
 
 Revisando la web vemos el apartado “Server status” y al acceder aparece:
 
-![image.png](/images/HackTheBox/image%201.png)
+![image.png](WriteUps/images/HackTheBox/image 1.png)
 
 Con dos credenciales : tomcat/s3cret
 
 Probamos a acceder:
 
-![image.png](/images/HackTheBox/image%202.png)
+![image.png](WriteUps/images/HackTheBox/image 2.png)
 
 Vemos que al acceder, podemos subir ficheros .war
 
@@ -101,7 +101,7 @@ Subimos el fichero, nos ponemos a la escucha con netcat y accedemos a la web /sh
 
 Obtenemos la rever:
 
-![image.png](/images/HackTheBox/image%203.png)
+![image.png](WriteUps/images/HackTheBox/image 3.png)
 
 Accedemos a los directorios de Administrador :
 

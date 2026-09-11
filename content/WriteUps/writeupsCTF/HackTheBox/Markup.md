@@ -1,7 +1,7 @@
 ---
 publish: true
 created: 2026-09-11T12:16:55.942Z
-modified: 2026-09-11T12:24:56.146Z
+modified: 2026-09-11T18:12:57.729Z
 ---
 
 # Markup
@@ -89,7 +89,7 @@ PORT    STATE SERVICE  VERSION
 
   ```
 
-  ![image.png](/images/HackTheBox/image.png)
+  ![image.png](WriteUps/images/HackTheBox/image.png)
 
   Encontramos un panel de login. Buscamos credenciales por defecto con Burpsuite
 
@@ -97,15 +97,15 @@ PORT    STATE SERVICE  VERSION
 
   El payload 1 y dos para usuario y password respectivamente. Usamos diccionarios de Seclist
 
-  ![image.png](/images/HackTheBox/image%201.png)
+  ![image.png](WriteUps/images/HackTheBox/image 1.png)
 
   Ejecumaos ataque y obtenemos que la combinación “admin” y “password” nos dan un tamaño diferente y un codigo 200
 
-  ![image.png](/images/HackTheBox/image%202.png)
+  ![image.png](WriteUps/images/HackTheBox/image 2.png)
 
   Accedemos a la web con estas credenciales
 
-  ![image.png](/images/HackTheBox/image%203.png)
+  ![image.png](WriteUps/images/HackTheBox/image 3.png)
 
   Vemos el apartado “Order” para hacer pedidos y vamos a probar diferenes opciones
 
@@ -122,7 +122,7 @@ Siguiendo las instrucciones de la maquina, miramos de encontar un XXE.
 
 Capturamos una peticion en Order y cambiamos payload para XXE
 
-![image.png](/images/HackTheBox/image%204.png)
+![image.png](WriteUps/images/HackTheBox/image 4.png)
 
 Le ponemos nombre “exploit” y el triger es xxe
 
@@ -157,7 +157,7 @@ Aprovechando el xxe intentamos listar ficheros importantes.
 
 Como en la web hemos enumerado en el Codigo HTML el usuario Daniel, intentamos obtener la id\_rsa de este usuario
 
-![image.png](/images/HackTheBox/image%205.png)
+![image.png](WriteUps/images/HackTheBox/image 5.png)
 
 ```php
 <!DOCTYPE exploit [<!ENTITY xxe SYSTEM 'file:///c:/users/Daniel/.ssh/id_rsa'> ]>
@@ -165,7 +165,7 @@ Como en la web hemos enumerado en el Codigo HTML el usuario Daniel, intentamos o
 
 Obtenemos el fichero:
 
-![image.png](/images/HackTheBox/image%206.png)
+![image.png](WriteUps/images/HackTheBox/image 6.png)
 
 Intentamos conectar por ssh
 
@@ -216,7 +216,7 @@ Wevtutil.exe es una utilidad de línea de comandos de administrador que se utili
 
 Vemos que este proceso se ejecuta en la maquina victima:
 
-![image.png](/images/HackTheBox/image%207.png)
+![image.png](WriteUps/images/HackTheBox/image 7.png)
 
 Miramos que permisos tiene el bat:
 

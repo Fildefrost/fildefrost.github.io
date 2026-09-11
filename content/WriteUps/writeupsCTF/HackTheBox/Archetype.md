@@ -1,7 +1,7 @@
 ---
 publish: true
 created: 2026-09-11T12:16:55.927Z
-modified: 2026-09-11T12:24:55.330Z
+modified: 2026-09-11T18:12:57.300Z
 ---
 
 # Archetype
@@ -40,7 +40,7 @@ Comenzamos con un escaneo para identificar que puertos están abiertos.
 sudo nmap -p- --open -T5 -sS --min-rate 5000 -n -Pn -vvv 10.129.51.6 -oG targeted
 ```
 
-![image.png](/images/HackTheBox/image.png)
+![image.png](WriteUps/images/HackTheBox/image.png)
 
 ### **Enumeración de servicios**
 

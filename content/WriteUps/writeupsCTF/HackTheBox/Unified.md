@@ -1,7 +1,7 @@
 ---
 publish: true
 created: 2026-09-11T12:16:55.948Z
-modified: 2026-09-11T12:24:56.643Z
+modified: 2026-09-11T18:12:58.376Z
 ---
 
 # Unified
@@ -32,7 +32,7 @@ Comenzamos con un escaneo para identificar que puertos están abiertos.
 sudo nmap -p- --open --min-rate 5000 -sS -Pn -vvv 10.129.164.42 -oG allports
 ```
 
-![image.png](/images/HackTheBox/image.png)
+![image.png](WriteUps/images/HackTheBox/image.png)
 
 ### **Enumeración de servicios**
 
@@ -235,7 +235,7 @@ Con el nuevo password, probamos a logarnos en la web.
 
 En la parte de configuracion, vemos el password para acceder por ssh como root;
 
-![image.png](/images/HackTheBox/image%201.png)
+![image.png](WriteUps/images/HackTheBox/image 1.png)
 
 Password:  **NotACrackablePassword4U2022**
 

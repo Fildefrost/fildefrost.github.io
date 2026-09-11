@@ -1,7 +1,7 @@
 ---
 publish: true
 created: 2026-09-11T12:16:55.946Z
-modified: 2026-09-11T12:24:56.396Z
+modified: 2026-09-11T18:12:58.141Z
 ---
 
 # Sau
@@ -99,7 +99,7 @@ PORT      STATE    SERVICE REASON
 
 - **Enumeracion Web (55555)**
 
-  ![image.png](/images/HackTheBox/image.png)
+  ![image.png](WriteUps/images/HackTheBox/image.png)
 
 Whateweb
 
@@ -112,19 +112,19 @@ http://10.10.11.224:55555/web [200 OK] Bootstrap[3.3.7], Country[RESERVED][ZZ], 
 
 En la web vemos que se esta usando : request-basket 1.2.1 y que es vulnerable a SSRF
 
-![image.png](/images/HackTheBox/image%201.png)
+![image.png](WriteUps/images/HackTheBox/image 1.png)
 
 Probamos el SSRF enviando una peticion y mediante la redireccion del proxy a nuestra maquina, ver si recibimos la solicitud
 
 Creamos un basquet, nos ponemos en escucha, modificamos el proxy y usamos curl para hacer la peticion
 
-![image.png](/images/HackTheBox/image%202.png)
+![image.png](WriteUps/images/HackTheBox/image 2.png)
 
 ```php
 curl http://10.10.11.224:55555/2ck6d2 (basket-id)
 ```
 
-![image.png](/images/HackTheBox/image%203.png)
+![image.png](WriteUps/images/HackTheBox/image 3.png)
 
 Ahora lo que queremos es, ya que hemos encontrado un puerto 80 filtrado, ver si mediante el SSRF podemos enumerarlo, modificando la redireccion del Proxy al puerto 80 de la propia maquina
 
@@ -132,11 +132,11 @@ Ahora lo que queremos es, ya que hemos encontrado un puerto 80 filtrado, ver si 
  URL to http://127.0.0.1:80 
 ```
 
-![image.png](/images/HackTheBox/image%204.png)
+![image.png](WriteUps/images/HackTheBox/image 4.png)
 
 Accedemos de nuevo al basquet que hemos creado, esta vez en nuetro navegador y vemos el puerto 80 de la maquina victima
 
-![image.png](/images/HackTheBox/image%205.png)
+![image.png](WriteUps/images/HackTheBox/image 5.png)
 
 ## Explotación
 

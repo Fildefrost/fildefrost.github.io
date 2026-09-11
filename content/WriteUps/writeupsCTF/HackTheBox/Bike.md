@@ -1,7 +1,7 @@
 ---
 publish: true
 created: 2026-09-11T12:16:55.928Z
-modified: 2026-09-11T12:24:55.461Z
+modified: 2026-09-11T18:12:57.368Z
 ---
 
 # Bike
@@ -90,14 +90,14 @@ http://10.129.97.64 [200 OK] Country[RESERVED][ZZ], HTML5, IP[10.129.97.64], JQu
 
 Test SSTI: Probamos con un test
 
-![image.png](/images/HackTheBox/image.png)
+![image.png](WriteUps/images/HackTheBox/image.png)
 
 ```bash
 Payload: Campo email
  {{7*7}} 
 ```
 
-![image.png](/images/HackTheBox/image%201.png)
+![image.png](WriteUps/images/HackTheBox/image 1.png)
 
 Vemos que da un error
 
@@ -179,9 +179,9 @@ Con la linia modificada :
 
 Ahora, con Burpsuite, URLEncodeamos el payload y lo enviamos en el campo “email”:
 
-![image.png](/images/HackTheBox/image%202.png)
+![image.png](WriteUps/images/HackTheBox/image 2.png)
 
-![image.png](/images/HackTheBox/image%203.png)
+![image.png](WriteUps/images/HackTheBox/image 3.png)
 
 Vemos que se ejecuta el comando “whoami” que enviamos en el payload.
 
@@ -194,7 +194,7 @@ Ahora probamos con otros comandos:
 /root');"}}
 ```
 
-![image.png](/images/HackTheBox/image%204.png)
+![image.png](WriteUps/images/HackTheBox/image 4.png)
 
 Por último, probamos a leer el contenido de la flag con:
 
@@ -203,7 +203,7 @@ Por último, probamos a leer el contenido de la flag con:
 /root/flag.txt');"}}
 ```
 
-![image.png](/images/HackTheBox/image%205.png)
+![image.png](WriteUps/images/HackTheBox/image 5.png)
 
 Flag:  6b258d726d287462d60c103d0142a81c
 

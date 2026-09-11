@@ -1,7 +1,7 @@
 ---
 publish: true
 created: 2026-09-11T12:16:55.937Z
-modified: 2026-09-11T12:24:55.911Z
+modified: 2026-09-11T18:12:57.624Z
 ---
 
 # Ignition
@@ -62,7 +62,7 @@ sudo nano /etc/hosts
 
 Visitamos el sitio
 
-![image.png](/images/HackTheBox/image.png)
+![image.png](WriteUps/images/HackTheBox/image.png)
 
 Scripts nmap
 
@@ -115,7 +115,7 @@ Starting gobuster in directory enumeration mode
 
 Enumeramos /admin
 
-![image.png](/images/HackTheBox/image%201.png)
+![image.png](WriteUps/images/HackTheBox/image 1.png)
 
 En la pagina /setup encontramos la versión:
 
@@ -137,7 +137,7 @@ Password: qwerty123
 
 Nota: Las pistas de HTBox decian que se podia hacer una busqueda de los passwords mas usados en 2024. Buscandolo en google encontramos (qwerty123)
 
-![image.png](/images/HackTheBox/image%202.png)
+![image.png](WriteUps/images/HackTheBox/image 2.png)
 
 ## Explotación
 

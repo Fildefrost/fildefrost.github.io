@@ -1,7 +1,7 @@
 ---
 publish: true
 created: 2026-09-11T12:16:55.939Z
-modified: 2026-09-11T12:24:55.941Z
+modified: 2026-09-11T18:12:57.644Z
 ---
 
 # Included
@@ -68,7 +68,7 @@ PORT   STATE SERVICE
 
 - **Enumeración Web**
 
-  ![image.png](/images/HackTheBox/image.png)
+  ![image.png](WriteUps/images/HackTheBox/image.png)
 
   Whatweb
 

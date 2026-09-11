@@ -1,7 +1,7 @@
 ---
 publish: true
 created: 2026-09-11T12:16:55.945Z
-modified: 2026-09-11T12:24:56.273Z
+modified: 2026-09-11T18:12:57.811Z
 ---
 
 # Pennyworth
@@ -55,7 +55,7 @@ PORT     STATE SERVICE VERSION
 
 - **Enumeración puerto 8080**
 
-  ![image.png](/images/HackTheBox/image.png)
+  ![image.png](WriteUps/images/HackTheBox/image.png)
 
   Enumeramos la version, con :
 
@@ -63,7 +63,7 @@ PORT     STATE SERVICE VERSION
   http://10.129.164.29:8080/error
   ```
 
-  ![image.png](/images/HackTheBox/image%201.png)
+  ![image.png](WriteUps/images/HackTheBox/image 1.png)
 
   Probamos a acceder con credenciales por defecto y entramos con :
 
@@ -71,7 +71,7 @@ PORT     STATE SERVICE VERSION
 
   Buscamos una rever shell y la ejecutamos en el editor de scripts Groovy:
 
-  ![image.png](/images/HackTheBox/image%202.png)
+  ![image.png](WriteUps/images/HackTheBox/image 2.png)
 
   Encontramos la rever en :
 
@@ -92,7 +92,7 @@ PORT     STATE SERVICE VERSION
 
   Buscamos la flag:
 
-  ![image.png](/images/HackTheBox/image%203.png)
+  ![image.png](WriteUps/images/HackTheBox/image 3.png)
 
 ## Conclusión
 

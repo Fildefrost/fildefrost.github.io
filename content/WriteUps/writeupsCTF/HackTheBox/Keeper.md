@@ -1,7 +1,7 @@
 ---
 publish: true
 created: 2026-09-11T12:16:55.941Z
-modified: 2026-09-11T12:24:56.072Z
+modified: 2026-09-11T18:12:57.699Z
 ---
 
 # Keeper
@@ -71,13 +71,13 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 - Enumeracion web
 
-  ![image.png](/images/HackTheBox/image.png)
+  ![image.png](WriteUps/images/HackTheBox/image.png)
 
-  ![image.png](/images/HackTheBox/image%201.png)
+  ![image.png](WriteUps/images/HackTheBox/image 1.png)
 
 Añadimos al /etc/host : tickets.keeper.htb
 
-![image.png](/images/HackTheBox/image%202.png)
+![image.png](WriteUps/images/HackTheBox/image 2.png)
 
 Vemos que usa “Request Tracker”
 
@@ -85,13 +85,13 @@ Buscamos las credenciales por defecto : root/password
 
 Nos logamos en el panel
 
-![image.png](/images/HackTheBox/image%203.png)
+![image.png](WriteUps/images/HackTheBox/image 3.png)
 
 Vamos a la seccion Usuarios y vemos
 
 Usuario: lnorgaard
 
-![image.png](/images/HackTheBox/image%204.png)
+![image.png](WriteUps/images/HackTheBox/image 4.png)
 
 Probamos a acceder por SSH : Explotacion 1
 
@@ -165,9 +165,9 @@ _**rødgrød med fløde**_
 
 Instalamos KeePass y abrimos el fichero con la contraseña
 
-![image.png](/images/HackTheBox/image%205.png)
+![image.png](WriteUps/images/HackTheBox/image 5.png)
 
-![image.png](/images/HackTheBox/image%206.png)
+![image.png](WriteUps/images/HackTheBox/image 6.png)
 
 El formato es un formato de ppk (Putty Private Key)
 

@@ -1,7 +1,7 @@
 ---
 publish: true
 created: 2026-09-11T12:16:55.955Z
-modified: 2026-09-11T12:24:56.905Z
+modified: 2026-09-11T18:12:58.607Z
 ---
 
 # ColdBox
@@ -32,7 +32,7 @@ Comenzamos con un escaneo para identificar que puertos están abiertos.
 sudo nmap -p- --open --min-rate 5000 -sS -n -Pn -vvv 10.10.134.48 -oG allports
 ```
 
-![image.png](/images/TryHackMe/image.png)
+![image.png](WriteUps/images/TryHackMe/image.png)
 
 ### **Enumeración de servicios**
 
@@ -63,7 +63,7 @@ Una vez listado los puertos accesibles, procederemos a realizar la enumeración 
 
   **WordPress 4.1.31**
 
-  ![image.png](/images/TryHackMe/image%201.png)
+  ![image.png](WriteUps/images/TryHackMe/image 1.png)
 
 Hacemos fuzzing para ver si encontramos directorios :
 
@@ -71,17 +71,17 @@ Hacemos fuzzing para ver si encontramos directorios :
 ❯ gobuster dir -u http://10.10.134.48/ -w /usr/share/seclists/Discovery/Web-Content/directory-list-2.3-medium.txt
 ```
 
-![image.png](/images/TryHackMe/image%202.png)
+![image.png](WriteUps/images/TryHackMe/image 2.png)
 
 En el panel /hidden enontramos posibles usuarios :
 
-![image.png](/images/TryHackMe/image%203.png)
+![image.png](WriteUps/images/TryHackMe/image 3.png)
 
 Users: C0ldd, Hugo, Philip
 
 Encontramos un WordPress:
 
-![image.png](/images/TryHackMe/image%204.png)
+![image.png](WriteUps/images/TryHackMe/image 4.png)
 
 Enumeramos el WordPress con WPScan:
 
@@ -189,7 +189,7 @@ Accedemos al panel con usuario c0ldd
 
 Una vez autenticados con un usuario, probaremos a editar un plugin con una revershell :
 
-![image.png](/images/TryHackMe/image%205.png)
+![image.png](WriteUps/images/TryHackMe/image 5.png)
 
 Editamos el tema “Twenttyfifteen” , el archivo 404.php, con una revershell en php.
 

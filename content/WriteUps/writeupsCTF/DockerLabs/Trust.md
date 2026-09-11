@@ -1,7 +1,7 @@
 ---
 publish: true
 created: 2026-09-11T12:16:55.923Z
-modified: 2026-09-11T12:24:55.193Z
+modified: 2026-09-11T18:12:57.158Z
 ---
 
 # Trust
@@ -27,7 +27,7 @@ Comenzamos con un escaneo para identificar que puertos están abiertos.
 sudo nmap -p-  --open -sS --min-rate 5000 -vvv -n -Pn 172.17.0.2 -oG allports
 ```
 
-![image.png](/images/DockerLabs/image.png)
+![image.png](WriteUps/images/DockerLabs/image.png)
 
 ### **Enumeración de servicios**
 
@@ -48,7 +48,7 @@ Una vez listado los puertos accesibles, procederemos a realizar la enumeración 
 
   Encontramos ruta : secret.php
 
-  ![image.png](/images/DockerLabs/image%201.png)
+  ![image.png](WriteUps/images/DockerLabs/image 1.png)
 
 ## Explotación
 
@@ -60,7 +60,7 @@ Al tener un usuario en la web y el puerto 22 abierto, probamos a bruteforcear el
 hydra -l mario -P /usr/share/wordlist/rockyou.txt ssh://172.17.0.2 -v
 ```
 
-![image.png](/images/DockerLabs/image%202.png)
+![image.png](WriteUps/images/DockerLabs/image 2.png)
 
 Obtenemos password :
 
@@ -76,7 +76,7 @@ Accedemos por ssh con usuario y password. Buscamos binarios SUID
 sudo -l
 ```
 
-![image.png](/images/DockerLabs/image%203.png)
+![image.png](WriteUps/images/DockerLabs/image 3.png)
 
 Buscamos como explotar el binaro en GTFObins: vim
 
@@ -85,7 +85,7 @@ sudo vim -c ':!/bin/sh'
 
 ```
 
-![image.png](/images/DockerLabs/image%204.png)
+![image.png](WriteUps/images/DockerLabs/image 4.png)
 
 ## Conclusión
 

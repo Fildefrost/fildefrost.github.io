@@ -1,7 +1,7 @@
 ---
 publish: true
 created: 2026-09-11T12:16:55.921Z
-modified: 2026-09-11T12:24:55.117Z
+modified: 2026-09-11T18:12:57.096Z
 ---
 
 # PN
@@ -23,17 +23,17 @@ sudo nmap -p- -sS -sCV --min-rate 5000 -vvv  -n -Pn 172.17.0.2 -oG allports
 No troba res
 Provem a treure el parametre -Pn
 
-![image.png](/images/DockerLabs/image.png)
+![image.png](WriteUps/images/DockerLabs/image.png)
 
 Ens conectem a la web i trobem un tomcat
 
-![image.png](/images/DockerLabs/image%201.png)
+![image.png](WriteUps/images/DockerLabs/image 1.png)
 
 Provem a accedir al panell manager.
 Demana login
 Provem amb credencials per defecte:
 
-![image.png](/images/DockerLabs/image%202.png)
+![image.png](WriteUps/images/DockerLabs/image 2.png)
 
 Accedirm amb tomact:s3cr3t
 
@@ -47,10 +47,10 @@ Pujem el fitxer :
 
 .
 
-![image.png](/images/DockerLabs/image%203.png)
+![image.png](WriteUps/images/DockerLabs/image 3.png)
 
 Explotem la shell
 
-![image.png](/images/DockerLabs/image%204.png)
+![image.png](WriteUps/images/DockerLabs/image 4.png)
 
 Entrem com a root

@@ -1,7 +1,7 @@
 ---
 publish: true
 created: 2026-09-11T12:16:55.932Z
-modified: 2026-09-11T12:24:55.664Z
+modified: 2026-09-11T18:12:57.437Z
 ---
 
 # Cap
@@ -25,12 +25,12 @@ sudo nmap -p- --open -sS --min-rate 5000 -vvv -n -Pn 10.10.10.245 -oG allports
 
 > Resultats:
 >
-> ![image.png](/images/HackTheBox/image.png)
+> ![image.png](WriteUps/images/HackTheBox/image.png)
 
 Veiem que canviant el valor del data a 0 mostra un fitxer pcap
 S'obre amb Wireshark i mostra credencials de FTP
 
-![image.png](/images/HackTheBox/image%201.png)
+![image.png](WriteUps/images/HackTheBox/image 1.png)
 
 User: nathan
 password: Buck3tH4TF0RM3!
@@ -39,11 +39,11 @@ password: Buck3tH4TF0RM3!
 
 Entrem per ftp i obtenim el flag de user:
 
-![image.png](/images/HackTheBox/image%202.png)
+![image.png](WriteUps/images/HackTheBox/image 2.png)
 
 Entrem per ssh amb les mateixes credencials:
 
-![image.png](/images/HackTheBox/image%203.png)
+![image.png](WriteUps/images/HackTheBox/image 3.png)
 
 # Explotación de vulnerabilidades
 
@@ -56,7 +56,7 @@ getcap -r / 2>/dev/null
 
 ens troba:
 
-![image.png](/images/HackTheBox/image%204.png)
+![image.png](WriteUps/images/HackTheBox/image 4.png)
 
 Veiem qu el path /usr/bin/python3.8 te les capabilities habilitades
 
@@ -69,7 +69,7 @@ Busquem a gtfobins com explotar el binari:
 
 ```
 
-![image.png](/images/HackTheBox/image%205.png)
+![image.png](WriteUps/images/HackTheBox/image 5.png)
 
 # Bandera(s)
 

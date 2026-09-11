@@ -1,7 +1,7 @@
 ---
 publish: true
 created: 2026-09-11T12:16:55.951Z
-modified: 2026-09-11T12:24:56.762Z
+modified: 2026-09-11T18:12:58.559Z
 ---
 
 # CyberPunk
@@ -192,7 +192,7 @@ ftp> put cmd_Search.php
 
 ```
 
-![image.png](/images/HackerLabs/image.png)
+![image.png](WriteUps/images/HackerLabs/image.png)
 
 Vemos que accedermos correctamente.
 Accedemos al fichero `/etc/passwd` y enumeramos usuarios:

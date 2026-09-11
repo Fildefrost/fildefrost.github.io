@@ -1,7 +1,7 @@
 ---
 publish: true
 created: 2026-09-11T12:16:55.950Z
-modified: 2026-09-11T12:24:56.696Z
+modified: 2026-09-11T18:12:58.505Z
 ---
 
 # BocatadeCalamares
@@ -76,7 +76,7 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 - **Enumeración web**
 
-  ![image.png](/images/HackerLabs/image.png)
+  ![image.png](WriteUps/images/HackerLabs/image.png)
 
 Fuzzing
 
@@ -93,21 +93,21 @@ Starting gobuster in directory enumeration mode
 
 Login.php
 
-![image.png](/images/HackerLabs/image%201.png)
+![image.png](WriteUps/images/HackerLabs/image 1.png)
 
 Ya que la webpricipal hace alusión a injecciones de SQL, probamos alguna con Burpsuite:
 
-![image.png](/images/HackerLabs/image%202.png)
+![image.png](WriteUps/images/HackerLabs/image 2.png)
 
 Nos lleva directos  :
 
 Admin.php
 
-![image.png](/images/HackerLabs/image%203.png)
+![image.png](WriteUps/images/HackerLabs/image 3.png)
 
 To-do-list
 
-![image.png](/images/HackerLabs/image%204.png)
+![image.png](WriteUps/images/HackerLabs/image 4.png)
 
 Sacamos de aquí que la web es lee-archivos en base64
 
@@ -118,11 +118,11 @@ bGVlX2FyY2hpdm9zCg==
 
 La web por tanto es bGVlX2FyY2hpdm9zCg==.php
 
-![image.png](/images/HackerLabs/image%205.png)
+![image.png](WriteUps/images/HackerLabs/image 5.png)
 
 Interceptamos con Burpsuite y vemos este código:
 
-![image.png](/images/HackerLabs/image%206.png)
+![image.png](WriteUps/images/HackerLabs/image 6.png)
 
 ```html
 <html>
@@ -142,9 +142,9 @@ Interceptamos con Burpsuite y vemos este código:
 
 Probamos a leer el /etc/passwd
 
-![image.png](/images/HackerLabs/image%207.png)
+![image.png](WriteUps/images/HackerLabs/image 7.png)
 
-![image.png](/images/HackerLabs/image%208.png)
+![image.png](WriteUps/images/HackerLabs/image 8.png)
 
 Obtenemos el fichero y con el los usuarios.
 

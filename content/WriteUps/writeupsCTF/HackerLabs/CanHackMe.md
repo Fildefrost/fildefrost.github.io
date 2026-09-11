@@ -1,7 +1,7 @@
 ---
 publish: true
 created: 2026-09-11T12:16:55.950Z
-modified: 2026-09-11T12:24:56.711Z
+modified: 2026-09-11T18:12:58.514Z
 ---
 
 # CanHackMe
@@ -83,7 +83,7 @@ Service Info: Host: 172.17.0.2; OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 - **ENUMERACIÓN WEB**
 
-  ![image.png](/images/HackerLabs/image.png)
+  ![image.png](WriteUps/images/HackerLabs/image.png)
 
   Añadimos host
 
@@ -92,7 +92,7 @@ Service Info: Host: 172.17.0.2; OS: Linux; CPE: cpe:/o:linux:linux_kernel
   192.168.0.137   canyouhackme.thl
   ```
 
-![image.png](/images/HackerLabs/image%201.png)
+![image.png](WriteUps/images/HackerLabs/image 1.png)
 
 Revisamos el codigo fuente:
 

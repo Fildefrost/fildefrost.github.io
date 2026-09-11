@@ -1,7 +1,7 @@
 ---
 publish: true
 created: 2026-09-11T12:16:55.918Z
-modified: 2026-09-11T12:24:55.018Z
+modified: 2026-09-11T18:12:56.795Z
 ---
 
 # Amor
@@ -22,18 +22,18 @@ Created time: 5 de diciembre de 2024 21:10
 sudo nmap -p- -sS -sCV --min-rate 5000 -vvv  -n -Pn 172.17.0.2 -oG allports
 ```
 
-![image.png](/images/DockerLabs/image.png)
+![image.png](WriteUps/images/DockerLabs/image.png)
 
 ```bash
 sudo nmap -sCV -p22,80 172.17.0.2 -oN targeted
 cat targeted -l ruby
 ```
 
-![image.png](/images/DockerLabs/image%201.png)
+![image.png](WriteUps/images/DockerLabs/image 1.png)
 
 Web :
 
-![image.png](/images/DockerLabs/image%202.png)
+![image.png](WriteUps/images/DockerLabs/image 2.png)
 
 Possibles usuaris :
 
@@ -48,7 +48,7 @@ Juan
 gobuster dir -w /usr/share/seclists/Discovery/Web-Content/directory-list-2.3-medium.txt -t 30 -u [http://172.17.0.2/](http://172.17.0.2/) -x html,php,php7,txt,py
 ```
 
-![image.png](/images/DockerLabs/image%203.png)
+![image.png](WriteUps/images/DockerLabs/image 3.png)
 
 Fuff per trobar directoris :
 
@@ -67,7 +67,7 @@ provem conexio ssh
 
 Entrem com a carlota i trobem fitxer:
 
-![image.png](/images/DockerLabs/image%204.png)
+![image.png](WriteUps/images/DockerLabs/image 4.png)
 
 Descarreguem fitxer amb :
 
@@ -77,7 +77,7 @@ ssh [carlota@172.17.0.2](mailto:carlota@172.17.0.2) 'cat /home/carlota/Desktop/f
 
 Mirem contingut amb Exiftool, pero no trobem res
 
-![image.png](/images/DockerLabs/image%205.png)
+![image.png](WriteUps/images/DockerLabs/image 5.png)
 
 Trobem un altre usuari:
 
@@ -100,7 +100,7 @@ sudo steghide extract -sf imagen.jpg
 
 Trobem fitxer secret.txt
 
-![image.png](/images/DockerLabs/image%206.png)
+![image.png](WriteUps/images/DockerLabs/image 6.png)
 
 ZXNsYWNhc2FkZXBpbnlwb24=
 
@@ -123,11 +123,11 @@ Pass: eslacasadepinypon
 
 Busquem fitxers
 
-![image.png](/images/DockerLabs/image%207.png)
+![image.png](WriteUps/images/DockerLabs/image 7.png)
 
 Al escriptori hi ha un txt:
 
-![image.png](/images/DockerLabs/image%208.png)
+![image.png](WriteUps/images/DockerLabs/image 8.png)
 
 ### Escalada
 
@@ -137,16 +137,16 @@ Busquem permisos amb sudo
 Sudo -l
 ```
 
-![image.png](/images/DockerLabs/image%209.png)
+![image.png](WriteUps/images/DockerLabs/image 9.png)
 
 Podem explotar: ruby
 
 Busquem GTOBINS:
 
-![image.png](/images/DockerLabs/image%2010.png)
+![image.png](WriteUps/images/DockerLabs/image 10.png)
 
 Executem :
 
-![image.png](/images/DockerLabs/image%2011.png)
+![image.png](WriteUps/images/DockerLabs/image 11.png)
 
-![image.png](/images/DockerLabs/image%2012.png)
+![image.png](WriteUps/images/DockerLabs/image 12.png)

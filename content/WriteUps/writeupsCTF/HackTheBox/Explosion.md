@@ -1,7 +1,7 @@
 ---
 publish: true
 created: 2026-09-11T12:16:55.935Z
-modified: 2026-09-11T12:24:55.726Z
+modified: 2026-09-11T18:12:57.459Z
 ---
 
 # Explosion
@@ -48,7 +48,7 @@ PORT      STATE SERVICE       REASON
 
 ```
 
-![image.png](/images/HackTheBox/image.png)
+![image.png](WriteUps/images/HackTheBox/image.png)
 
 ### **Enumeración de servicios**
 

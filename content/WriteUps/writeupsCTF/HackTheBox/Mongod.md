@@ -1,7 +1,7 @@
 ---
 publish: true
 created: 2026-09-11T12:16:55.943Z
-modified: 2026-09-11T12:24:56.207Z
+modified: 2026-09-11T18:12:57.742Z
 ---
 
 # Mongod
@@ -35,7 +35,7 @@ PORT      STATE SERVICE REASON
 27017/tcp open  mongod  syn-ack ttl 63
 ```
 
-![image.png](/images/HackTheBox/image.png)
+![image.png](WriteUps/images/HackTheBox/image.png)
 
 ### **Enumeración de servicios**
 

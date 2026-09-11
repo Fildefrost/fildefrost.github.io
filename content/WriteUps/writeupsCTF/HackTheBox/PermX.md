@@ -1,7 +1,7 @@
 ---
 publish: true
 created: 2026-09-11T12:16:55.945Z
-modified: 2026-09-11T12:24:56.311Z
+modified: 2026-09-11T18:12:57.922Z
 ---
 
 # PermX
@@ -23,7 +23,7 @@ sudo nmap -p-  -open -sS --min-rate 5000 -vvv -n -Pn 10.10.11.23 -oG allports
 
 ```
 
-![image.png](/images/HackTheBox/image.png)
+![image.png](WriteUps/images/HackTheBox/image.png)
 
 > NMAP specific ports
 
@@ -31,7 +31,7 @@ sudo nmap -p-  -open -sS --min-rate 5000 -vvv -n -Pn 10.10.11.23 -oG allports
 sudo nmap -p22,80 -sCV 10.10.11.23 -oN nmap
 ```
 
-![image.png](/images/HackTheBox/image%201.png)
+![image.png](WriteUps/images/HackTheBox/image 1.png)
 
 ## Serveis Web
 
@@ -45,7 +45,7 @@ echo -n '10.10.11.23 permx.htb' | sudo tee -a /etc/hosts > /dev/null
 
 Llavors si accedir a la web:
 
-![image.png](/images/HackTheBox/image%202.png)
+![image.png](WriteUps/images/HackTheBox/image 2.png)
 
 BUsquem subdominis amnb ffuf
 
@@ -57,7 +57,7 @@ fuf -w [seclist] -u [<http://ejemplo.com>] -H "Host: FUZZ.board.htb" -fs 15949
 Trobem subdomini : lms
 S'afegeix al etc/hosts
 
-![image.png](/images/HackTheBox/image%203.png)
+![image.png](WriteUps/images/HackTheBox/image 3.png)
 
 Busquem directoris amb gobuster:
 
@@ -66,11 +66,11 @@ gobuster dir -w /usr/share/seclists/Discovery/Web-Content/directory-list-2.3-med
 
 ```
 
-![image.png](/images/HackTheBox/image%204.png)
+![image.png](WriteUps/images/HackTheBox/image 4.png)
 
 Trobem un robots.txt
 
-![image.png](/images/HackTheBox/image%205.png)
+![image.png](WriteUps/images/HackTheBox/image 5.png)
 
 # Análisis de vulnerabilidades
 
@@ -90,7 +90,7 @@ nc -lvp 4444
 
 Obtenim una web shell:
 
-![image.png](/images/HackTheBox/image%206.png)
+![image.png](WriteUps/images/HackTheBox/image 6.png)
 
 Busquem usuaris al etc/passwd
 
@@ -103,13 +103,13 @@ find / -perm -u=s -type f 2>/dev/null
 
 ```
 
-![image.png](/images/HackTheBox/image%207.png)
+![image.png](WriteUps/images/HackTheBox/image 7.png)
 
 Busquem credencials a la configuracio de Chamilo
 
 fitxer: var/www/chamilo/conf/configration.php
 
-![image.png](/images/HackTheBox/image%208.png)
+![image.png](WriteUps/images/HackTheBox/image 8.png)
 
 User: chamilo
 Pass: 03F6lY3uXAP2bkW8
@@ -119,7 +119,7 @@ Password encription: bcrypt
 
 Provem a fer servir aquest password amb usuari trobat abans: mtz
 
-![image.png](/images/HackTheBox/image%209.png)
+![image.png](WriteUps/images/HackTheBox/image 9.png)
 
 Busquem permisos per usuar mtz
 
@@ -127,11 +127,11 @@ Busquem permisos per usuar mtz
 sudo -l
 ```
 
-![image.png](/images/HackTheBox/image%2010.png)
+![image.png](WriteUps/images/HackTheBox/image 10.png)
 
 Trobem un script que dona permisos. El podem executar amb sudo sense password
 
-![image.png](/images/HackTheBox/image%2011.png)
+![image.png](WriteUps/images/HackTheBox/image 11.png)
 
 Passa 3 variables i nomes funciona si estan dins de /home/mtz
 
@@ -145,11 +145,11 @@ sudo ./acl.sh mtz rwx /home/mtz/pwn
 
 Editem ara el fitxer pwn (sudoers) i posem al usuar mtz com a root
 
-![image.png](/images/HackTheBox/image%2012.png)
+![image.png](WriteUps/images/HackTheBox/image 12.png)
 
 Depres provem a convertirnos en root:
 
-![image.png](/images/HackTheBox/image%2013.png)
+![image.png](WriteUps/images/HackTheBox/image 13.png)
 
 # Bandera(s)
 

