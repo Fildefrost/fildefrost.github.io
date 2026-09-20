@@ -1,7 +1,7 @@
 ---
 publish: true
 created: 2025-02-22T15:17:51.371Z
-modified: 2026-09-19T14:28:43.451Z
+modified: 2026-09-20T13:51:20.366Z
 ---
 
 ## **1. Información Inicial**
