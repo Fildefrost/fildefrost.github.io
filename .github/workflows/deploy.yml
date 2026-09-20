@@ -39,7 +39,9 @@ jobs:
         run: npx quartz build
 
       - name: Debug
-        run: echo "--- Contenido de public/Attachments (primeros 30) ---" find public/Attachments -type f | head -30 echo "--- Total de archivos en public/Attachments ---" find public/Attachments -type f | wc -l echo "--- Buscando específicamente image 5.png ---" find public -iname "image 5.png" -o -iname "image%205.png"
+        run: find public/Attachments -type f | wc -l - name: Debug - listar primeros attachments en public 
+        run: find public/Attachments -type f | head -30 - name: Debug - buscar image 5.png 
+        run: find public -iname "image*5*.png"
     
 
       - name: Upload artifact
