@@ -1,7 +1,7 @@
 ---
 publish: true
 created: 2026-09-11T12:16:55.950Z
-modified: 2026-09-19T14:28:47.111Z
+modified: 2026-09-21T20:40:54.034Z
 ---
 
 # BocatadeCalamares
@@ -76,7 +76,7 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 - **Enumeración web**
 
-  ![image.png](Attachments/images/HackerLabs/image.png)
+  ![[Attachments/images/HackerLabs/image.png]]
 
 Fuzzing
 
@@ -93,21 +93,20 @@ Starting gobuster in directory enumeration mode
 
 Login.php
 
-![image.png](Attachments/images/HackerLabs/image 1.png)
-
+![[Attachments/images/HackerLabs/image 1.png]]
 Ya que la webpricipal hace alusión a injecciones de SQL, probamos alguna con Burpsuite:
 
-![image.png](Attachments/image 2.png)
+![[Attachments/image 2.png]]
 
 Nos lleva directos  :
 
 Admin.php
 
-![image.png](Attachments/image 3.png)
+![[Attachments/image 3.png]]
 
 To-do-list
 
-![image.png](Attachments/image 4.png)
+![[Attachments/image 4.png]]
 
 Sacamos de aquí que la web es lee-archivos en base64
 
@@ -118,11 +117,11 @@ bGVlX2FyY2hpdm9zCg==
 
 La web por tanto es bGVlX2FyY2hpdm9zCg==.php
 
-![image.png](Attachments/image 5.png)
+![[Attachments/image 5.png]]
 
 Interceptamos con Burpsuite y vemos este código:
 
-![image.png](Attachments/image 6.png)
+![[Attachments/image 6.png]]
 
 ```html
 <html>
@@ -142,9 +141,9 @@ Interceptamos con Burpsuite y vemos este código:
 
 Probamos a leer el /etc/passwd
 
-![image.png](Attachments/image 7.png)
+![[Attachments/images/HackerLabs/image.png]]
 
-![image.png](Attachments/image 8.png)
+![[Attachments/image 8.png]]
 
 Obtenemos el fichero y con el los usuarios.
 
