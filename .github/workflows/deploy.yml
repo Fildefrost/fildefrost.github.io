@@ -37,16 +37,7 @@ jobs:
 
       - name: Build Quartz
         run: npx quartz build
-
-      - name: Debug - contar attachmet
-        run: find public/Attachments -type f | wc -l 
-      
-      - name: Debug - listar primeros attachments en public 
-        run: find public/Attachments -type f | head -30 
-        
-      - name: Debug - buscar image 5.png 
-        run: find public -iname "image*5*.png"
-    
+       
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
