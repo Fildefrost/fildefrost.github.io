@@ -1,7 +1,7 @@
 ---
 publish: true
 created: 2026-09-11T12:16:55.926Z
-modified: 2026-09-19T14:28:44.256Z
+modified: 2026-09-21T17:30:19.675Z
 ---
 
 # WhereIsMyShell
@@ -22,7 +22,7 @@ Created time: 5 de diciembre de 2024 21:28
 sudo nmap -p- -sS --min-rate 5000 -vvv  -n -Pn 172.17.0.2 -oG allports
 ```
 
-![image.png](Attachments/images/DockerLabs/image.png)
+![image.png](Attachments/image.png)
 
 ### FUZZING
 
@@ -75,4 +75,4 @@ Tractament tty
 
 Utilitzem la contrasenya que hem trobat de root:
 
-![image.png](Attachments/images/DockerLabs/image 5.png)
+![[Attachments/images/DockerLabs/image 5.png]]

@@ -1,7 +1,7 @@
 ---
 publish: true
 created: 2026-09-11T12:16:55.925Z
-modified: 2026-09-19T14:28:44.229Z
+modified: 2026-09-21T16:59:42.682Z
 ---
 
 # Walking CMS
@@ -20,7 +20,7 @@ Created time: 5 de diciembre de 2024 21:36
 sudo nmap -p- -sS -vvv  -n -Pn 172.17.0.2 -oG allports
 ```
 
-![image.png](Attachments/images/DockerLabs/image.png)
+![image.png](Attachments/image.png)
 
 ![image.png](Attachments/images/DockerLabs/image 1.png)
 

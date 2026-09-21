@@ -1,7 +1,7 @@
 ---
 publish: true
 created: 2026-09-11T12:16:55.920Z
-modified: 2026-09-19T14:28:43.773Z
+modified: 2026-09-21T16:59:42.494Z
 ---
 
 # Library
@@ -22,7 +22,7 @@ Created time: 5 de diciembre de 2024 21:23
 sudo nmap -p- --open -sS --min-rate 5000 -vvv -Pn -n 172.17.0.2 -oG allports
 ```
 
-![image.png](Attachments/images/DockerLabs/image.png)
+![image.png](Attachments/image.png)
 
 ```bash
 sudo nmap -p22,80 -sCV 172.17.0.2 -oN targeted

@@ -1,7 +1,7 @@
 ---
 publish: true
 created: 2026-09-11T12:16:55.918Z
-modified: 2026-09-19T14:28:43.478Z
+modified: 2026-09-21T16:59:42.410Z
 ---
 
 # Amor
@@ -22,7 +22,7 @@ Created time: 5 de diciembre de 2024 21:10
 sudo nmap -p- -sS -sCV --min-rate 5000 -vvv  -n -Pn 172.17.0.2 -oG allports
 ```
 
-![image.png](Attachments/images/DockerLabs/image.png)
+![image.png](Attachments/image.png)
 
 ```bash
 sudo nmap -sCV -p22,80 172.17.0.2 -oN targeted

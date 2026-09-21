@@ -1,7 +1,7 @@
 ---
 publish: true
 created: 2026-09-11T12:16:55.924Z
-modified: 2026-09-19T14:28:44.098Z
+modified: 2026-09-21T16:59:42.634Z
 ---
 
 # Upload
@@ -41,7 +41,7 @@ Una vez listado los puertos accesibles, procederemos a realizar la enumeración 
 
   Whatweb :
 
-  ![image.png](Attachments/images/DockerLabs/image.png)
+  ![image.png](Attachments/image.png)
 
   Fuzzing :
 

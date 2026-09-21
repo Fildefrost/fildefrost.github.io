@@ -1,7 +1,7 @@
 ---
 publish: true
 created: 2026-09-11T12:16:55.921Z
-modified: 2026-09-19T14:28:43.846Z
+modified: 2026-09-21T16:59:42.524Z
 ---
 
 # PN
@@ -23,7 +23,7 @@ sudo nmap -p- -sS -sCV --min-rate 5000 -vvv  -n -Pn 172.17.0.2 -oG allports
 No troba res
 Provem a treure el parametre -Pn
 
-![image.png](Attachments/images/DockerLabs/image.png)
+![image.png](Attachments/image.png)
 
 Ens conectem a la web i trobem un tomcat
 

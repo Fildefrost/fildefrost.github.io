@@ -1,7 +1,7 @@
 ---
 publish: true
 created: 2026-09-11T12:16:55.923Z
-modified: 2026-09-19T14:28:44.020Z
+modified: 2026-09-21T16:59:42.587Z
 ---
 
 # Trust
@@ -27,7 +27,7 @@ Comenzamos con un escaneo para identificar que puertos están abiertos.
 sudo nmap -p-  --open -sS --min-rate 5000 -vvv -n -Pn 172.17.0.2 -oG allports
 ```
 
-![image.png](Attachments/images/DockerLabs/image.png)
+![image.png](Attachments/image.png)
 
 ### **Enumeración de servicios**
 

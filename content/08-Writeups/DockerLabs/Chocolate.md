@@ -1,7 +1,7 @@
 ---
 publish: true
 created: 2026-09-11T12:16:55.919Z
-modified: 2026-09-19T14:28:43.689Z
+modified: 2026-09-21T16:59:42.450Z
 ---
 
 # Chocolate
@@ -20,7 +20,7 @@ Reconeixement
 sudo nmap -p- --open -sS --min-rate 5000 -vvv  -n 172.17.0.2 -oG allports
 ```
 
-![image.png](Attachments/images/DockerLabs/image.png)
+![image.png](Attachments/image.png)
 
 Mirem codi font i apareix;
 
